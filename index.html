@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="img/inverted_small.png" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="css/latte-carousel.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/demo.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="js/latte-carousel.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/demo.js"></script>
+
+    <title>LatteCarousel</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="https://latte-carousel.github.io">
+                <img src="img/colored_small.png" width="50" height="45"> LatteCarousel
+            </a>
+        </div>
+    </nav>
+
+    <header class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">LatteCarousel</h1>
+
+            <p class="lead">LatteCarousel is a lightweight and responsive carousel without any dependencies.</p>
+
+            <a class="btn btn-primary btn-lg" href="#get-started">Get Started</a>
+            <a class="btn btn-outline-primary btn-lg" href="https://github.com/latte-carousel/latte-carousel/releases">Download</a>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 mb-5">
+                <div class="row">
+                    <div class="col-4 text-center">
+                        <i class="fas fa-mobile"></i>
+                    </div>
+                    <div class="col-8">
+                        <h4>Responsive Options</h4>
+                        <p>Customize options for each breakpoint.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 mb-5">
+                <div class="row">
+                    <div class="col-4 text-center">
+                        <i class="fas fa-hand-point-up"></i>
+                    </div>
+                    <div class="col-8">
+                        <h4>Touch Support</h4>
+                        <p>Compatible with desktop and mobile devices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 mb-5">
+                <div class="row">
+                    <div class="col-4 text-center">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <div class="col-8">
+                        <h4>JavaScript Only</h4>
+                        <p>No additional dependencies needed.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 mb-5">
+                <div class="row">
+                    <div class="col-4 text-center">
+                        <i class="fab fa-chrome"></i>
+                    </div>
+                    <div class="col-8">
+                        <h4>Browser Support</h4>
+                        <p>Works on any ES5 and CSS3 browser.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="latte-carousel">
+                <div class="latte-content">
+                    <div class="latte-stage">
+                        <div class="latte-item">
+                            <div>1</div>
+                        </div>
+                        <div class="latte-item">
+                            <div>2</div>
+                        </div>
+                        <div class="latte-item">
+                            <div>3</div>
+                        </div>
+                        <div class="latte-item">
+                            <div>4</div>
+                        </div>
+                        <div class="latte-item">
+                            <div>5</div>
+                        </div>
+                        <div class="latte-item">
+                            <div>6</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="jumbotron jumbotron-fluid mb-0">
+        <div class="container" id="get-started">
+            <h2 class="display-4">Get Started</h2>
+
+            <p class="lead">First include both stylesheet and script files:</p>
+
+            <pre><code class="html">&lt;link rel="stylesheet" href="latte-carousel.min.css"&gt;
+&lt;script src="latte-carousel.min.js"&gt;&lt;/script&gt;</code></pre>
+
+            <p class="lead">Then add the following HTML for each carousel:</p>
+
+            <pre><code class="html">&lt;div class="latte-carousel"&gt;
+    &lt;div class="latte-content"&gt;
+        &lt;div class="latte-stage"&gt;
+            &lt;div class="latte-item"&gt;...&lt;/div&gt;
+            &lt;div class="latte-item"&gt;...&lt;/div&gt;
+            &lt;div class="latte-item"&gt;...&lt;/div&gt;
+            &lt;div class="latte-item"&gt;...&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            <p class="lead">Finally create a new instance passing the carousel element and custom options:</p>
+
+            <pre><code class="js">var root = document.querySelector('.latte-carousel');
+
+var options = {
+    count: 3,
+    touch: true,
+    buttons: true,
+    dots: true,
+    rewind: true,
+    autoplay: 0,
+    responsive: {
+        "0":    { count: 1.5, buttons: false },
+        "480":  { count: 2.5, buttons: false },
+        "768":  { count: 3,   touch: false },
+        "1440": { count: 4,   touch: false }
+    }
+};
+
+var carousel = new latte.Carousel(root, options);</code></pre>
+
+            <p class="lead">You can also trigger events to change position:</p>
+
+            <pre><code class="js">carousel.trigger('next');
+carousel.trigger('previous');</code></pre>
+        </div>
+    </section>
+
+    <footer class="container-fluid text-center">
+        <a href="https://github.com/latte-carousel/latte-carousel">LatteCarousel</a>
+    </footer>
+</body>
+
+</html>
