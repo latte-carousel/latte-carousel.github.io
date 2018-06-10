@@ -1,0 +1,73 @@
+body {
+    background-color: #fefcfb;
+}
+
+*:not(code)>span,
+p,
+a,
+a:hover,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #523824;
+}
+
+.navbar,
+.jumbotron {
+    background-color: #f5e0d1;
+}
+
+footer {
+    line-height: 80px;
+    height: 80px;
+    background-color: #bc8b67;
+}
+
+footer a,
+footer a:hover {
+    color: #fefcfb;
+}
+
+.btn-primary {
+    background-color: #523824;
+    border-color: #523824;
+    color: #f5e0d1;
+}
+
+.btn-outline-primary {
+    border-color: #523824;
+    color: #523824;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-outline-primary:hover,
+.btn-outline-primary:active {
+    background-color: #523824;
+    border-color: #523824;
+    color: #f5e0d1;
+}
+
+.fas,
+.fab {
+    font-size: 100px;
+}
+
+.fa-mobile {
+    color: #e93e1c;
+}
+
+.fa-hand-point-up {
+    color: #73c738;
+}
+
+.fa-js-square {
+    color: #f9c124;
+}
+
+.fa-chrome {
+    color: #2395e7;
+}
