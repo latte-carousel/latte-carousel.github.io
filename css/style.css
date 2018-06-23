@@ -2,7 +2,7 @@ body {
     background-color: #fefcfb;
 }
 
-*:not(code)>span,
+*:not(code) > span,
 p,
 a,
 a:hover,

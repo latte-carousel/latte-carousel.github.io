@@ -111,28 +111,24 @@
         </div>
 
         <div class="row mb-5">
-            <div class="latte-carousel">
-                <div class="latte-content">
-                    <div class="latte-stage">
-                        <div class="latte-item">
-                            <div>1</div>
-                        </div>
-                        <div class="latte-item">
-                            <div>2</div>
-                        </div>
-                        <div class="latte-item">
-                            <div>3</div>
-                        </div>
-                        <div class="latte-item">
-                            <div>4</div>
-                        </div>
-                        <div class="latte-item">
-                            <div>5</div>
-                        </div>
-                        <div class="latte-item">
-                            <div>6</div>
-                        </div>
-                    </div>
+            <div class="latte-carousel" id="carousel">
+                <div class="latte-item">
+                    <div>1</div>
+                </div>
+                <div class="latte-item">
+                    <div>2</div>
+                </div>
+                <div class="latte-item">
+                    <div>3</div>
+                </div>
+                <div class="latte-item">
+                    <div>4</div>
+                </div>
+                <div class="latte-item">
+                    <div>5</div>
+                </div>
+                <div class="latte-item">
+                    <div>6</div>
                 </div>
             </div>
         </div>
@@ -149,22 +145,16 @@
 
             <p class="lead">Then add the following HTML for each carousel:</p>
 
-            <pre><code class="html">&lt;div class="latte-carousel"&gt;
-    &lt;div class="latte-content"&gt;
-        &lt;div class="latte-stage"&gt;
-            &lt;div class="latte-item"&gt;...&lt;/div&gt;
-            &lt;div class="latte-item"&gt;...&lt;/div&gt;
-            &lt;div class="latte-item"&gt;...&lt;/div&gt;
-            &lt;div class="latte-item"&gt;...&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+            <pre><code class="html">&lt;div class="latte-carousel" id="carousel"&gt;
+    &lt;div class="latte-item"&gt;...&lt;/div&gt;
+    &lt;div class="latte-item"&gt;...&lt;/div&gt;
+    &lt;div class="latte-item"&gt;...&lt;/div&gt;
+    &lt;div class="latte-item"&gt;...&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-            <p class="lead">Finally create a new instance passing the carousel element and custom options:</p>
+            <p class="lead">Finally create a new instance passing the carousel selector and custom options:</p>
 
-            <pre><code class="js">var root = document.querySelector('.latte-carousel');
-
-var options = {
+            <pre><code class="js">var options = {
     count: 3,
     touch: true,
     buttons: true,
@@ -179,12 +169,18 @@ var options = {
     }
 };
 
-var carousel = new latte.Carousel(root, options);</code></pre>
+var carousel = new latte.Carousel('#carousel', options);</code></pre>
 
             <p class="lead">You can also trigger events to change position:</p>
 
             <pre><code class="js">carousel.trigger('next');
-carousel.trigger('previous');</code></pre>
+carousel.trigger('previous');
+
+carousel.trigger('goto', 0);</code></pre>
+
+            <p class="lead">Or remove the entire carousel:</p>
+
+            <pre><code class="js">carousel.remove();</code></pre>
         </div>
     </section>
 
