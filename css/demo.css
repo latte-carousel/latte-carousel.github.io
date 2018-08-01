@@ -1,4 +1,4 @@
-.latte-item div {
+.latte-item > div {
     font-size: 48px;
     line-height: 200px;
     display: inline-block;
@@ -9,10 +9,10 @@
     color: white;
 }
 
-.latte-item:nth-child(even) div {
+.latte-item:nth-child(even) > div {
     background-color: #bc8b67;
 }
 
-.latte-item:nth-child(odd) div {
+.latte-item:nth-child(odd) > div {
     background-color: #a77856;
 }
