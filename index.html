@@ -35,12 +35,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/latte-carousel@1.1.1/dist/latte-carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/latte-carousel@1.2.0/dist/latte-carousel.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/demo.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/latte-carousel@1.1.1/dist/latte-carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/latte-carousel@1.2.0/dist/latte-carousel.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/demo.js"></script>
 
@@ -62,9 +62,9 @@
 
             <p class="lead">LatteCarousel is a lightweight and responsive carousel without any dependencies.</p>
 
-            <a class="btn btn-primary btn-md" href="#get-started">Get Started</a>
-            <a class="btn btn-outline-primary btn-md" href="https://www.npmjs.com/package/latte-carousel">Download</a>
-            <a class="btn btn-outline-primary btn-md" href="https://github.com/latte-carousel/latte-carousel">Github</a>
+            <a id="btn-get-started" class="btn btn-primary btn-md" href="#get-started">Get Started</a>
+            <a id="btn-npm" class="btn btn-outline-primary btn-md" href="https://www.npmjs.com/package/latte-carousel">Download</a>
+            <a id="btn-github" class="btn btn-outline-primary btn-md" href="https://github.com/latte-carousel/latte-carousel">Github</a>
         </div>
     </header>
 
@@ -155,8 +155,8 @@
 &lt;script src="latte-carousel.min.js"&gt;&lt;/script&gt;</code></pre>
 
             <pre><code class="html">&lt;link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/latte-carousel@1.1.1/dist/latte-carousel.min.css"&gt;
-&lt;script src="https://cdn.jsdelivr.net/npm/latte-carousel@1.1.1/dist/latte-carousel.min.js"&gt;&lt;/script&gt;</code></pre>
+      href="https://cdn.jsdelivr.net/npm/latte-carousel@1.2.0/dist/latte-carousel.min.css"&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/latte-carousel@1.2.0/dist/latte-carousel.min.js"&gt;&lt;/script&gt;</code></pre>
 
             <p class="lead">Then add the following HTML for each carousel:</p>
 
@@ -176,6 +176,7 @@
     dots: true,
     rewind: true,
     autoplay: 0,
+    animation: 500,
     responsive: {
         "0":    { count: 1.5, buttons: false },
         "480":  { count: 2.5, buttons: false },
